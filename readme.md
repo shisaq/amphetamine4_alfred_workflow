@@ -10,11 +10,14 @@
 
 ## Shortcuts
 
-`am on` keep your Mac on
+### `am on` keep your Mac on
+
 ![am on](https://i.loli.net/2018/09/28/5bad87c0207f8.png)
 
-`am off` turn off Amphetamine
+### `am off` turn off Amphetamine
+
 ![am off](https://i.loli.net/2018/09/28/5bad87c01f7c0.png)
 
-`ams 30` keep your Mac on for 30 minutes
+### `ams 30` keep your Mac on for 30 minutes
+
 ![ams 30](https://i.loli.net/2018/09/28/5bad87c009c45.png)
