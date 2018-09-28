@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>0375395E-532B-474F-9424-C6C124C8877D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E86F2400-5DA6-41CD-A0CB-9EB1798E0AA7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1904D6D9-10F7-4D6F-BFA1-10AD3BF9B468</key>
+		<array/>
+		<key>A9597DBF-0FBC-412B-B7E8-7AFB307A23D6</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A9F26D7B-FCE7-4350-8190-B3958A891FF8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A9F26D7B-FCE7-4350-8190-B3958A891FF8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1904D6D9-10F7-4D6F-BFA1-10AD3BF9B468</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EB7422AA-C1AA-4B26-8D9B-1B178D1FD312</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0375395E-532B-474F-9424-C6C124C8877D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>ShisaQ</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Amphetamine Switch</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>fixedorder</key>
+				<false/>
+				<key>items</key>
+				<string>[{"imagefile":"c26bb21554e5e21a81cf7576f85bf1149d2bc023.png","title":"Amphetamine on","arg":"on","subtitle":"turn on"},{"imagefile":"8de20541180719b96ae0b818dcedbcef74d63ec7.png","title":"Amphetamine off","arg":"off","subtitle":"turn off"}]</string>
+				<key>keyword</key>
+				<string>am</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Amphetamin Switch</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>A9597DBF-0FBC-412B-B7E8-7AFB307A23D6</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Amphetamine"
+	if(q="on") then
+		turn on
+		"Your Mac will be active all the time."
+	else if(q="off") then
+		turn off
+		"Your Mac will sleep then."
+	end if
+  end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>A9F26D7B-FCE7-4350-8190-B3958A891FF8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Amphetamine Control</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>1904D6D9-10F7-4D6F-BFA1-10AD3BF9B468</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>ams</string>
+				<key>subtext</key>
+				<string>active for {query} minutes</string>
+				<key>text</key>
+				<string>Set Amphetamine activate time</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>EB7422AA-C1AA-4B26-8D9B-1B178D1FD312</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Amphetamine"
+	turn on for q
+  end tell
+  "Screen will be active for " &amp; q &amp; " minutes."
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>0375395E-532B-474F-9424-C6C124C8877D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Amphetamine Control</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>E86F2400-5DA6-41CD-A0CB-9EB1798E0AA7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>0375395E-532B-474F-9424-C6C124C8877D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+		<key>1904D6D9-10F7-4D6F-BFA1-10AD3BF9B468</key>
+		<dict>
+			<key>xpos</key>
+			<integer>640</integer>
+			<key>ypos</key>
+			<integer>130</integer>
+		</dict>
+		<key>A9597DBF-0FBC-412B-B7E8-7AFB307A23D6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>240</integer>
+			<key>ypos</key>
+			<integer>130</integer>
+		</dict>
+		<key>A9F26D7B-FCE7-4350-8190-B3958A891FF8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>130</integer>
+		</dict>
+		<key>E86F2400-5DA6-41CD-A0CB-9EB1798E0AA7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>640</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+		<key>EB7422AA-C1AA-4B26-8D9B-1B178D1FD312</key>
+		<dict>
+			<key>xpos</key>
+			<integer>240</integer>
+			<key>ypos</key>
+			<integer>260</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://shisaq.github.io</string>
+</dict>
+</plist>
