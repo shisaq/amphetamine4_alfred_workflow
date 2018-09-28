@@ -4,7 +4,7 @@
 
 ## How to use
 
-[Download](https://github.com/shisaq/amphetamine4_alfred_workflow/raw/master/Amphetamine4%20Switch.alfredworkflow) `Amphetamine4 Switch.alfredworkflow` in this repo and simply drag it into your Alfred workflows.
+Go to [download page](https://github.com/shisaq/amphetamine4_alfred_workflow/releases), download the latest version of `Amphetamine4.Switch.alfredworkflow` and simply drag it into your Alfred workflows.
 
 ![install workflow](https://i.loli.net/2018/09/28/5bad87c00d071.png)
 
