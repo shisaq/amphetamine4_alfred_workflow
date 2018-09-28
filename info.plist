@@ -172,26 +172,6 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-  tell application "Amphetamine"
-	start new session with options {duration:q, interval:minutes, displaySleepAllowed:true}
-  end tell
-  "Screen will be active for " &amp; q &amp; " minutes."
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>0375395E-532B-474F-9424-C6C124C8877D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -207,6 +187,26 @@ end alfred_script</string>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
 			<string>E86F2400-5DA6-41CD-A0CB-9EB1798E0AA7</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Amphetamine"
+	start new session with options {duration:q, interval:minutes, displaySleepAllowed:false}
+  end tell
+  "Screen will be active for " &amp; q &amp; " minutes."
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>0375395E-532B-474F-9424-C6C124C8877D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
