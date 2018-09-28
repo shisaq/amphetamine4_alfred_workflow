@@ -76,6 +76,31 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Amphetamine"
+	if(q="on") then
+		start new session
+		"Your Mac will be active all the time."
+	else if(q="off") then
+		end session
+		"Your Mac will sleep then."
+	end if
+  end tell
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>A9F26D7B-FCE7-4350-8190-B3958A891FF8</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -99,31 +124,6 @@
 			<string>alfred.workflow.input.listfilter</string>
 			<key>uid</key>
 			<string>A9597DBF-0FBC-412B-B7E8-7AFB307A23D6</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-  tell application "Amphetamine"
-	if(q="on") then
-		turn on
-		"Your Mac will be active all the time."
-	else if(q="off") then
-		turn off
-		"Your Mac will sleep then."
-	end if
-  end tell
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>A9F26D7B-FCE7-4350-8190-B3958A891FF8</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -172,26 +172,6 @@ end alfred_script</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-  tell application "Amphetamine"
-	turn on for q
-  end tell
-  "Screen will be active for " &amp; q &amp; " minutes."
-end alfred_script</string>
-				<key>cachescript</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>0375395E-532B-474F-9424-C6C124C8877D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>lastpathcomponent</key>
 				<false/>
 				<key>onlyshowifquerypopulated</key>
@@ -210,6 +190,26 @@ end alfred_script</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>applescript</key>
+				<string>on alfred_script(q)
+  tell application "Amphetamine"
+	start new session with options {duration:q, interval:minutes, displaySleepAllowed:true}
+  end tell
+  "Screen will be active for " &amp; q &amp; " minutes."
+end alfred_script</string>
+				<key>cachescript</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.applescript</string>
+			<key>uid</key>
+			<string>0375395E-532B-474F-9424-C6C124C8877D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -218,44 +218,44 @@ end alfred_script</string>
 		<key>0375395E-532B-474F-9424-C6C124C8877D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>410</integer>
+			<integer>350</integer>
 			<key>ypos</key>
-			<integer>260</integer>
+			<integer>250</integer>
 		</dict>
 		<key>1904D6D9-10F7-4D6F-BFA1-10AD3BF9B468</key>
 		<dict>
 			<key>xpos</key>
-			<integer>640</integer>
+			<integer>580</integer>
 			<key>ypos</key>
 			<integer>130</integer>
 		</dict>
 		<key>A9597DBF-0FBC-412B-B7E8-7AFB307A23D6</key>
 		<dict>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>180</integer>
 			<key>ypos</key>
 			<integer>130</integer>
 		</dict>
 		<key>A9F26D7B-FCE7-4350-8190-B3958A891FF8</key>
 		<dict>
 			<key>xpos</key>
-			<integer>410</integer>
+			<integer>350</integer>
 			<key>ypos</key>
 			<integer>130</integer>
 		</dict>
 		<key>E86F2400-5DA6-41CD-A0CB-9EB1798E0AA7</key>
 		<dict>
 			<key>xpos</key>
-			<integer>640</integer>
+			<integer>580</integer>
 			<key>ypos</key>
-			<integer>260</integer>
+			<integer>250</integer>
 		</dict>
 		<key>EB7422AA-C1AA-4B26-8D9B-1B178D1FD312</key>
 		<dict>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>180</integer>
 			<key>ypos</key>
-			<integer>260</integer>
+			<integer>250</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
